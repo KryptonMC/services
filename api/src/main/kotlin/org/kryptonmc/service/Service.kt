@@ -8,6 +8,8 @@
  */
 package org.kryptonmc.service
 
+import com.google.inject.BindingAnnotation
+
 /**
  * Binding annotation for requesting a service from a provider.
  *
@@ -23,6 +25,8 @@ package org.kryptonmc.service
  * @param id the ID of the provider to provide from
  * @param version the version of the provider to provide from
  */
+@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FIELD)
+@BindingAnnotation
 annotation class Service(
     val id: String,
     val version: String = ""

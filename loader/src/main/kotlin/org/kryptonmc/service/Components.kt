@@ -17,9 +17,9 @@ internal object Components {
 
     @JvmStatic
     @AutoAnnotation
-    private fun of(service: Service, name: String): Component = AutoAnnotation_Components_of(service, name)
+    fun service(id: String, version: String): Service = AutoAnnotation_Components_service(id, version)
 
     @JvmStatic
     @AutoAnnotation
-    private fun service(id: String, version: String): Service = AutoAnnotation_Components_service(id, version)
+    private fun of(service: Service, name: String): Component = AutoAnnotation_Components_of(service, name)
 }

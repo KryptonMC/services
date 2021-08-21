@@ -8,6 +8,8 @@
  */
 package org.kryptonmc.service
 
+import com.google.inject.BindingAnnotation
+
 /**
  * A binding annotation that wraps the [Service] annotation and the name of a service
  * in a single annotation, as Guice does not support multiple binding annotations on
@@ -16,6 +18,7 @@ package org.kryptonmc.service
  * @param service the service provider data
  * @param name the name of the service
  */
+@BindingAnnotation
 annotation class Component(
     val service: Service,
     val name: String
